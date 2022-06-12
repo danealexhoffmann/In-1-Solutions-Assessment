@@ -7,7 +7,7 @@ const ProductDetails = () => {
   // Call API On Mount
   useEffect(() => {
     fetchAvailableProducts();
-  }, []);
+  });
 
   const [productInfo, setProductInfo] = useState([]);
 
