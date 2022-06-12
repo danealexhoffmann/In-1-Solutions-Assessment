@@ -13,18 +13,18 @@ const ProductItems = () => {
 
   // Call API On Mount
   useEffect(() => {
-    fetchAvailableProducts();
+    fetchProductInfo();
   }, []);
 
-  const [availableProducts, setAvailableProducts] = useState([]);
+  const [productInfo, setProductInfo] = useState([]);
 
   // Fetch API Data and Add to State
-  const fetchAvailableProducts = async () => {
+  const fetchProductInfo = async () => {
     const data = await fetch(
       "https://shop.bookin1.com/api/property/7716/allvouchers"
     );
     const items = await data.json();
-    setAvailableProducts(items.vouchers);
+    setProductInfo(items.vouchers);
   };
 
   // Search Bar Query State
@@ -49,9 +49,9 @@ const ProductItems = () => {
       <div className="product-grid grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {/* column */}
         {/* Filter Data According to Search Value & Map Data to HTML Elements */}
-        {availableProducts
+        {productInfo
           .filter((val) => {
-            if (query == "") {
+            if (query === "") {
               return val;
             } else if (val.name.toLowerCase().includes(query.toLowerCase())) {
               return val;
