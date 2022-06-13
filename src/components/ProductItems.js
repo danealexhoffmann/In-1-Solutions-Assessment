@@ -31,7 +31,7 @@ const ProductItems = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="container mx-auto py-10 bg-light-gray">
+    <div className="mx-auto py-10 bg-light-gray w-full dark:bg-dark-teal transition-all">
       <div className="text-center pt-10 pb-20">
         {/* Search Input */}
         <input
@@ -40,13 +40,13 @@ const ProductItems = () => {
           onChange={(event) => {
             setQuery(event.target.value);
           }}
-          placeholder="Search offers"
-          className="w-[400px] py-3 font-Poppins font-light px-4 border border-solid border-2 border-dark-teal"
+          placeholder="Search products"
+          className="w-[400px] py-3 font-Poppins font-light px-4 border border-solid border-2 border-dark-teal dark:border-white dark:bg-dark-teal dark:text-white"
         />
       </div>
 
       {/* Grid */}
-      <div className="product-grid grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="product-grid grid grid-cols-1 gap-20 lg:grid-cols-3">
         {/* column */}
         {/* Filter Data According to Search Value & Map Data to HTML Elements */}
         {productInfo
@@ -62,7 +62,7 @@ const ProductItems = () => {
               <div
                 key={product.id}
                 sequence={product.sequence}
-                className="flex justify-center flex-col bg-white h-fit w-400 shrink grow mx-auto"
+                className="flex justify-center flex-col bg-white h-fit w-400 mx-auto"
               >
                 {/* Image */}
                 <Imgix

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { ArrowSmRightIcon } from "@heroicons/react/outline";
 
 const ProductDetails = () => {
   let params = useParams();
@@ -22,9 +23,9 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white">
+    <div className="flex flex-col bg-white dark:bg-dark-teal dark:text-white">
       {/* Title */}
-      <h1 className=" product-title text-center font-GildaDisplay text-4xl text-dark-teal pt-5 pb-10 mx-7 lg:text-8xl lg:mx-20">
+      <h1 className=" product-title text-center font-GildaDisplay text-4xl text-dark-teal pt-5 pb-10 mx-7 dark:text-white lg:text-7xl lg:mx-20">
         {productInfo.name}
       </h1>
       {/* Title-Image */}
@@ -37,10 +38,10 @@ const ProductDetails = () => {
       </div>
 
       {/* Description */}
-      <div className="lg:grid lg:grid-cols-2 lg:mx-96 lg:gap-16">
+      <div className="lg:grid lg:grid-cols-2 2xl:mx-60 lg:gap-16 transition-all">
         {/* Description-Text */}
         <div className="mx-7">
-          <h1 className="product-title text-start font-GildaDisplay text-5xl leading-tight text-dark-teal pt-5 pb-7">
+          <h1 className="product-title text-start font-GildaDisplay text-5xl leading-tight text-dark-teal pt-5 pb-7 dark:text-white">
             {productInfo.name}
           </h1>
           <div
@@ -57,9 +58,12 @@ const ProductDetails = () => {
           <div className="text-center mt-10 mb-20 lg:text-left">
             <button
               href={productInfo.voucherUrl}
-              className="font-Poppins bg-white text-2xl text-dark-teal border border-solid border-4 border-dark-teal w-full py-3 transition-all hover:bg-dark-teal hover:border-dark-teal hover:text-white lg:w-72 "
+              className="font-Poppins bg-white text-2xl text-dark-teal border border-solid border-2 border-dark-teal w-full py-3 transition-all hover:bg-dark-teal hover:border-dark-teal hover:text-white dark:bg-dark-teal dark:text-white dark:border-white hover:dark:bg-white hover:dark:text-dark-teal lg:w-72 "
             >
               BOOK NOW
+              <span>
+                <ArrowSmRightIcon className="h-5 w-5 inline-block ml-2 mb-0.5" />
+              </span>
             </button>
           </div>
         </div>
