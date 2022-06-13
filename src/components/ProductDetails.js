@@ -23,7 +23,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white dark:bg-dark-teal dark:text-white pt-24">
+    <div className="flex flex-col bg-white dark:bg-dark-teal dark:text-white pt-32">
       {/* Title */}
       <h1 className=" product-title text-center font-GildaDisplay text-4xl text-dark-teal pt-5 pb-10 mx-7 dark:text-white lg:text-7xl lg:mx-20">
         {productInfo.name}
