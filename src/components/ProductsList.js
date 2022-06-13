@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Imgix from "react-imgix";
 import "../App.css";
 
-const ProductItems = () => {
+const ProductsList = () => {
   const imgixProps = {
     imgixParams: {
       fit: "crop",
@@ -111,4 +111,4 @@ const ProductItems = () => {
   );
 };
 
-export default ProductItems;
+export default ProductsList;

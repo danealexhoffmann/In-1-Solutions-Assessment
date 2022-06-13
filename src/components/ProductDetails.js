@@ -57,15 +57,15 @@ const ProductDetails = () => {
           </h2>
           {/* Book Now Button */}
           <div className="text-center mt-10 mb-20 lg:text-left">
-            <button
+            <a
               href={productInfo.voucherUrl}
-              className="font-Poppins bg-white text-2xl text-dark-teal border border-solid border-2 border-dark-teal w-full py-3 transition-all hover:bg-dark-teal hover:border-dark-teal hover:text-white dark:bg-dark-teal dark:text-white dark:border-white hover:dark:bg-white hover:dark:text-dark-teal lg:w-72 "
+              className="font-Poppins bg-white text-2xl text-dark-teal border border-solid border-2 border-dark-teal py-3 px-24 transition-all hover:bg-dark-teal hover:border-dark-teal hover:text-white dark:bg-dark-teal dark:text-white dark:border-white hover:dark:bg-white hover:dark:text-dark-teal"
             >
               BOOK NOW
               <span>
                 <ArrowSmRightIcon className="h-5 w-5 inline-block ml-2 mb-0.5" />
               </span>
-            </button>
+            </a>
           </div>
         </div>
 

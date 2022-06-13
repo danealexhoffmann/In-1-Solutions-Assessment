@@ -1,4 +1,4 @@
-import ProductItems from "./components/ProductItems";
+import ProductsList from "./components/ProductsList";
 import ScrollToTop from "react-scroll-to-top";
 import { ArrowSmUpIcon } from "@heroicons/react/outline";
 import "./App.css";
@@ -21,7 +21,7 @@ function App() {
 
         {/* Product List */}
         <div className="bg-light-gray dark:bg-dark-teal">
-          <ProductItems />
+          <ProductsList />
         </div>
       </div>
     </div>
