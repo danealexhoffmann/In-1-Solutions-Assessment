@@ -7,11 +7,13 @@ import App from "./App";
 import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
 import reportWebVitals from "./reportWebVitals";
+import ScrollToTopOnChange from "./components/ScrollToTopOnChange";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTopOnChange />
       <Navbar />
       <Routes>
         <Route path="/" element={<App />} />

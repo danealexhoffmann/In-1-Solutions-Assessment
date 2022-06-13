@@ -23,7 +23,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white dark:bg-dark-teal dark:text-white">
+    <div className="flex flex-col bg-white dark:bg-dark-teal dark:text-white pt-24">
       {/* Title */}
       <h1 className=" product-title text-center font-GildaDisplay text-4xl text-dark-teal pt-5 pb-10 mx-7 dark:text-white lg:text-7xl lg:mx-20">
         {productInfo.name}
@@ -33,6 +33,7 @@ const ProductDetails = () => {
         <img
           className="w-full h-[187px] object-cover lg:h-[540px]"
           src={productInfo.voucherImageUrl}
+          loading="lazy"
           alt={productInfo.name}
         />
       </div>
@@ -73,6 +74,7 @@ const ProductDetails = () => {
           <img
             className="pb-10 mx-auto max-w-full lg:pt-5"
             src={productInfo.voucherImageUrl}
+            loading="lazy"
             alt={productInfo.name}
           />
         </div>
